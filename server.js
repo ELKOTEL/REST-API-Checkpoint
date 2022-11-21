@@ -14,7 +14,7 @@ app.use('/users' , require('./Routes/GetRoutes') )
 app.use('/users' , require('./Routes/PostRoutes') )
 app.use('/users' , require('./Routes/DeleteRoutes') )
 app.use('/users' , require('./Routes/UpdateRoutes'))
-const port =  8080
+const port =  process.env.PORT
 app.listen(port,(err)=>{
     err? console.log(err) : console.log('server is running')
 })
